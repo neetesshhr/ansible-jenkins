@@ -1,0 +1,14 @@
+---
+- hosts: servers
+  become: yes
+  remote_user: ec2-user
+  become_user: root
+  tasks:
+  - name: create jenkins jobs with xml files    
+    ansible.builtin.command: sudo java -jar jenkins-cli.jar -s http://localhost:8080  -auth dirsol:11e662e196a722e2d3a3d5514ef89707a8 install-plugin ansible:1.1
+  
+
+
+  
+
+ echo "# ansible-jenkins" >> README.md && git init && git add README.md && git commit -m "first commit" && git branch -M main && git remote add origin git@github.com:neetesshhr/ansible-jenkins.git && git push -u origin main     
