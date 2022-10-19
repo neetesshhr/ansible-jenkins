@@ -4,7 +4,14 @@
   remote_user: ec2-user
   become_user: root
   tasks:
-  - name: Build maven war
+  - name: Clone the file
+    ansible.builtin.git:
+      repo: git@github.com:neetesshhr/helloworldmavenproject.git
+      dest: mavenwar
+      clone: yes
+      update: yes
+
+  - name: Build maven
     ansible.builtin.command: cd mavenwar && mvn package
     
   
