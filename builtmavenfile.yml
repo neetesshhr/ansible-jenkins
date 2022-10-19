@@ -4,15 +4,8 @@
   remote_user: ec2-user
   become_user: root
   tasks:
-  - name: Clone the file
-    ansible.builtin.git:
-      repo: https://github.com/devops4solutions/CI-usingAnsible.git
-      dest: maven
-      clone: yes
-      update: yes
-
-  - name: Build maven
-    ansible.builtin.command: cd maven && mvn package
+  - name: Build maven war
+    ansible.builtin.command: cd mavenwar && mvn package
     
   
 
