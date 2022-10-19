@@ -5,4 +5,4 @@
   become_user: root
   tasks:
   - name: create jenkins jobs with xml files    
-    ansible.builtin.command: sudo java -jar jenkins-cli.jar -s http://localhost:8080  -auth dirsol:11e662e196a722e2d3a3d5514ef89707a8 install-plugin ansible:1.1
+    ansible.builtin.command: sudo java -jar jenkins-cli.jar -s http://localhost:8080  -auth dirsol:1103aff7b9589ab43d3f21315d466db98b install-plugin ansible:1.1
