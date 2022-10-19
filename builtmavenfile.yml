@@ -1,0 +1,16 @@
+---
+- hosts: servers
+  become: yes
+  remote_user: ec2-user
+  become_user: root
+  tasks:
+  - name: Build the war file
+    ansible.builtin.git:
+      repo: https://github.com/devops4solutions/CI-usingAnsible.git
+      dest: .
+      clone: yes
+      update: yes
+    
+  
+
+    
