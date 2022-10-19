@@ -21,6 +21,9 @@
   
   - name:  install java-openjdk11
     ansible.builtin.command: sudo amazon-linux-extras install java-openjdk11 -y
+    
+  - name: Install ansible on the machine
+    ansible.builtin.command: sudo amazon-linux-extras install ansible2 -y
 
   - name: Install Maven
     yum:
