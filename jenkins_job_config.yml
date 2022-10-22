@@ -5,10 +5,10 @@
   become_user: root
   tasks:
   - name: Install Jenkins Ansible plugin
-    ansible.builtin.command: sudo java -jar jenkins-cli.jar -s http://localhost:8080  -auth dirsol:1103aff7b9589ab43d3f21315d466db98b install-plugin ansible:1.1
+    ansible.builtin.command: sudo java -jar jenkins-cli.jar -s http://localhost:8080  -auth dirsol:xxxxxxxx install-plugin ansible:1.1
   
   - name: Install Jenkins Maven plugin
-    ansible.builtin.command: sudo java -jar jenkins-cli.jar -s http://localhost:8080  -auth dirsol:1103aff7b9589ab43d3f21315d466db98b install-plugin maven-plugin:3.20
+    ansible.builtin.command: sudo java -jar jenkins-cli.jar -s http://localhost:8080  -auth dirsol:xxxxxx install-plugin maven-plugin:3.20
   
   - name: Jenkins restart
     ansible.builtin.service:
